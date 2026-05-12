@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Elite - Facebook & Instagram Verification Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Meta Elite - Fast and professional Meta verification assistance for Facebook, Instagram & WhatsApp">
+    <meta name="theme-color" content="#1877F2">
+    <title>Meta Elite | Official Meta Verification Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,21 +15,20 @@
         }
 
         :root {
-            --primary: #0066ff;
-            --primary-dark: #0052cc;
-            --primary-light: #e6f0ff;
-            --secondary: #00d4ff;
-            --accent: #00ffa3;
-            --dark-bg: #0a0e27;
-            --dark-bg-secondary: #131829;
-            --dark-bg-tertiary: #1a1f3a;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b8d4;
-            --text-tertiary: #7a8ba8;
+            --primary: #1877F2;
+            --primary-dark: #0A5FD7;
+            --primary-light: #3B91F7;
+            --bg-dark: #0b0f1a;
+            --bg-darker: #050608;
+            --bg-card: rgba(255, 255, 255, 0.08);
+            --bg-card-hover: rgba(255, 255, 255, 0.12);
+            --text-primary: #FFFFFF;
+            --text-secondary: #B8C5D6;
+            --accent-cyan: #00D9FF;
+            --accent-purple: #7B68EE;
             --border-color: rgba(255, 255, 255, 0.1);
-            --border-color-light: rgba(255, 255, 255, 0.15);
-            --success: #00d084;
-            --warning: #ffa500;
+            --success: #10B981;
+            --warning: #F59E0B;
         }
 
         html {
@@ -37,1087 +36,153 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-bg-secondary) 50%, var(--dark-bg) 100%);
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 50%, #1a2847 100%);
             color: var(--text-primary);
-            line-height: 1.6;
             overflow-x: hidden;
+            line-height: 1.6;
+            min-height: 100vh;
         }
 
-        /* Utilities */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .gradient-text-accent {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color-light);
-            border-radius: 16px;
-        }
-
-        .glass-dark {
-            background: rgba(10, 14, 39, 0.4);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn {
-            padding: 12px 28px;
-            border: none;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-family: inherit;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(0, 102, 255, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 1.5px solid var(--secondary);
-            color: var(--secondary);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(0, 212, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 1.5px solid var(--text-secondary);
-            color: var(--text-secondary);
-        }
-
-        .btn-outline:hover {
-            background: rgba(176, 184, 212, 0.1);
-            color: var(--text-primary);
-        }
-
-        /* Navbar */
-        .navbar {
+        /* HEADER STYLES */
+        header {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 16px 0;
-            backdrop-filter: blur(15px);
-            background: rgba(10, 14, 39, 0.7);
+            backdrop-filter: blur(20px);
+            background: rgba(11, 15, 26, 0.7);
             border-bottom: 1px solid var(--border-color);
+            animation: slideDown 0.8s ease-out;
         }
 
-        .navbar-content {
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 22px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 100%);
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-circle {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 8px 24px rgba(24, 119, 242, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -0.5px;
         }
 
-        .nav-links {
+        nav {
             display: flex;
-            gap: 32px;
-            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
         }
 
-        .nav-links a {
+        nav a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 14px;
             font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
         }
 
-        .nav-actions {
-            display: flex;
-            gap: 12px;
+        nav a:hover {
+            color: var(--primary);
         }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+        nav a:hover::after {
+            width: 100%;
         }
 
-        /* Hero Section */
+        /* HERO SECTION */
         .hero {
-            padding: 140px 0 100px;
+            margin-top: 80px;
+            padding: 4rem 2rem;
+            min-height: calc(100vh - 80px);
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.1) 0%, transparent 50%);
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(24, 119, 242, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-40px); }
         }
 
         .hero-content {
+            max-width: 900px;
             text-align: center;
             position: relative;
             z-index: 2;
+            animation: fadeInUp 1s ease-out;
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 50px;
-            padding: 8px 16px;
-            margin-bottom: 24px;
-            font-size: 13px;
-            color: var(--secondary);
-            font-weight: 600;
-        }
-
-        .hero-badge::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--secondary);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 80px;
-        }
-
-        .hero-visual {
-            margin-top: 60px;
-            perspective: 1000px;
-        }
-
-        .dashboard-mock {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 24px;
-            background: linear-gradient(135deg, rgba(19, 24, 41, 0.8) 0%, rgba(26, 31, 58, 0.8) 100%);
-            border: 1px solid var(--border-color-light);
-            border-radius: 20px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-        }
-
-        .dashboard-header {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .dashboard-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 16px;
-            text-align: center;
-        }
-
-        .stat-icon {
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-
-        .stat-number {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .stat-label {
-            font-size: 12px;
-            color: var(--text-tertiary);
-        }
-
-        /* Background Effects */
-        .bg-glow {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .glow-1 {
-            width: 400px;
-            height: 400px;
-            background: var(--primary);
-            top: -100px;
-            left: -100px;
-        }
-
-        .glow-2 {
-            width: 300px;
-            height: 300px;
-            background: var(--secondary);
-            bottom: -50px;
-            right: -50px;
-        }
-
-        /* Trust Section */
-        .trust {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .trust-item {
-            text-align: center;
-        }
-
-        .trust-number {
-            font-size: 40px;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 8px;
-        }
-
-        .trust-label {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
-        @media (max-width: 1024px) {
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .trust-grid {
-                grid-template-columns: 1fr;
-            }
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Services Section */
-        .services {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .service-card {
-            padding: 32px;
-            position: relative;
-            overflow: hidden;
-            group: service-card;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            z-index: 0;
-        }
-
-        .service-card:hover::before {
-            background: rgba(0, 212, 255, 0.1);
-            border-color: rgba(0, 212, 255, 0.3);
-        }
-
-        .service-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin-bottom: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-icon {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.3) 0%, rgba(0, 255, 163, 0.2) 100%);
-            transform: translateY(-4px);
-        }
-
-        .service-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .service-description {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* How it Works */
-        .how-it-works {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .timeline {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-            position: relative;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            top: 50px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            z-index: 0;
-        }
-
-        .timeline-item {
-            position: relative;
-            z-index: 1;
-            padding-bottom: 40px;
-        }
-
-        .timeline-number {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border: 2px solid var(--dark-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            margin: 0 auto 20px;
-            font-size: 20px;
-        }
-
-        .timeline-title {
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .timeline-description {
-            text-align: center;
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-
-        @media (max-width: 768px) {
-            .timeline {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .timeline::after {
-                display: none;
-            }
-        }
-
-        /* Before/After */
-        .before-after {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .before-after-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            align-items: center;
-        }
-
-        .before-after-item {
-            text-align: center;
-        }
-
-        .phone-mockup {
-            width: 200px;
-            height: 400px;
-            background: linear-gradient(135deg, var(--dark-bg-secondary), var(--dark-bg-tertiary));
-            border: 1px solid var(--border-color-light);
-            border-radius: 40px;
-            padding: 12px;
-            margin: 0 auto 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            position: relative;
-        }
-
-        .phone-notch {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 20px;
-            background: var(--dark-bg);
-            border-radius: 0 0 20px 20px;
-            z-index: 10;
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: var(--dark-bg);
-            border-radius: 36px;
-            overflow: hidden;
-            padding-top: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .profile-pic {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-        }
-
-        .verified-badge {
-            width: 24px;
-            height: 24px;
-            background: var(--primary);
-            border: 2px solid var(--dark-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: white;
-            margin-left: 4px;
-        }
-
-        .username {
-            font-size: 12px;
-            font-weight: 600;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .profile-info {
-            font-size: 10px;
-            color: var(--text-secondary);
-        }
-
-        @media (max-width: 1024px) {
-            .before-after-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .testimonial-card {
-            padding: 32px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--border-color-light);
-            transform: translateY(-4px);
-        }
-
-        .testimonial-rating {
-            display: flex;
-            gap: 4px;
-            margin-bottom: 16px;
-        }
-
-        .star {
-            color: #ffa500;
-            font-size: 14px;
-        }
-
-        .testimonial-text {
-            font-size: 14px;
-            margin-bottom: 20px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-        }
-
-        .author-info h4 {
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .author-info p {
-            font-size: 12px;
-            color: var(--text-tertiary);
-        }
-
-        @media (max-width: 1024px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Pricing */
-        .pricing {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 60px;
-        }
-
-        .pricing-card {
-            padding: 40px 32px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .pricing-card.featured {
-            border: 1px solid rgba(0, 212, 255, 0.5);
-            background: rgba(0, 212, 255, 0.08);
-            transform: scale(1.05);
-        }
-
-        .pricing-card.featured::before {
-            opacity: 1;
-        }
-
-        .pricing-card:hover {
-            border-color: rgba(0, 212, 255, 0.3);
-        }
-
-        .pricing-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .pricing-name {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .pricing-description {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
-
-        .pricing-amount {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .pricing-period {
-            font-size: 13px;
-            color: var(--text-tertiary);
-            margin-bottom: 32px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .pricing-features li {
-            padding: 12px 0;
-            font-size: 13px;
-            color: var(--text-secondary);
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .pricing-features li::before {
-            content: '✓';
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        @media (max-width: 1024px) {
-            .pricing-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* FAQ */
-        .faq {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .faq-container {
-            max-width: 700px;
-            margin: 0 auto;
-            margin-top: 60px;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--border-color);
-            padding: 24px 0;
-        }
-
-        .faq-question {
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            color: var(--secondary);
-        }
-
-        .faq-icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: var(--text-secondary);
-            margin-top: 16px;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        /* Footer */
-        .footer {
-            padding: 80px 0 40px;
-            border-top: 1px solid var(--border-color);
-            margin-top: 100px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .footer-section h4 {
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-section ul li a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 13px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section ul li a:hover {
-            color: var(--text-primary);
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            border-top: 1px solid var(--border-color);
-            font-size: 12px;
-            color: var(--text-tertiary);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 16px;
-        }
-
-        .social-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-        }
-
-        @media (max-width: 1024px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
-            z-index: 999;
-            transition: all 0.3s ease;
-            color: white;
-            font-size: 28px;
-            text-decoration: none;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-            z-index: 10000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: var(--dark-bg-secondary);
-            border: 1px solid var(--border-color-light);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            position: relative;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 24px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .modal-close:hover {
-            color: var(--text-primary);
-        }
-
-        .modal-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .modal-subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            font-size: 14px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text-secondary);
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            color: var(--text-primary);
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--primary);
-        }
-
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -1125,622 +190,1209 @@
             }
         }
 
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease forwards;
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .btn {
+            padding: 0.95rem 2.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            color: white;
+            box-shadow: 0 8px 24px rgba(24, 119, 242, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(24, 119, 242, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* SECTION STYLES */
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* BENEFITS SECTION */
+        .benefits {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            position: relative;
+            overflow: hidden;
+            animation: scaleIn 0.6s ease-out backwards;
+        }
+
+        .benefit-card:nth-child(1) { animation-delay: 0.1s; }
+        .benefit-card:nth-child(2) { animation-delay: 0.2s; }
+        .benefit-card:nth-child(3) { animation-delay: 0.3s; }
+        .benefit-card:nth-child(4) { animation-delay: 0.4s; }
+        .benefit-card:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(24, 119, 242, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transition: all 0.6s ease;
+        }
+
+        .benefit-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(24, 119, 242, 0.2);
+        }
+
+        .benefit-card:hover::before {
+            top: -25%;
+            right: -25%;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefit-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .benefit-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* HOW IT WORKS SECTION */
+        .how-it-works {
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.05) 0%, transparent 100%);
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: slideUp 0.6s ease-out backwards;
+        }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+        .step:nth-child(4) { animation-delay: 0.4s; }
+        .step:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .step:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+        }
+
+        .step h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .steps-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            color: var(--warning);
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* PRICING SECTION */
+        .pricing {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+            transition: all 0.4s ease;
+            animation: zoomIn 0.6s ease-out backwards;
+        }
+
+        .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+        .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+        .pricing-card:nth-child(3) { animation-delay: 0.3s; }
+        .pricing-card:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, rgba(24, 119, 242, 0.15) 0%, rgba(0, 217, 255, 0.05) 100%);
+            transform: scaleY(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(24, 119, 242, 0.2);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scaleY(1.05) translateY(-8px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+        }
+
+        .pricing-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .price-currency {
+            font-size: 1.3rem;
+        }
+
+        .pricing-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* REVIEWS SECTION */
+        .reviews {
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.05) 0%, transparent 100%);
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            border-radius: 16px;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+        }
+
+        .carousel {
+            display: flex;
+            animation: autoScroll 40s linear infinite;
+        }
+
+        @keyframes autoScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .review-card {
+            min-width: 100%;
+            padding: 3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            margin: 1rem;
+            flex: 0 0 calc(33.333% - 2rem);
+        }
+
+        @media (max-width: 1024px) {
+            .review-card {
+                flex: 0 0 calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .review-card {
+                flex: 0 0 100%;
+            }
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .review-info h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .review-info span {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .review-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* LIVE ACTIVITY SECTION */
+        .live-activity {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .ticker {
+            background: linear-gradient(90deg, rgba(24, 119, 242, 0.1) 0%, rgba(0, 217, 255, 0.05) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .ticker-content {
+            display: flex;
+            gap: 3rem;
+            animation: ticker 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .ticker-item {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .ticker-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* FORM SECTION */
+        .form-section {
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.05) 0%, transparent 100%);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.95rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(184, 197, 214, 0.6);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231877F2' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        .form-group .btn {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: slideUp 0.6s ease-out backwards;
+        }
+
+        .contact-item:nth-child(1) { animation-delay: 0.1s; }
+        .contact-item:nth-child(2) { animation-delay: 0.2s; }
+        .contact-item:nth-child(3) { animation-delay: 0.3s; }
+        .contact-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .contact-item:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            color: var(--text-primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-disclaimer {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            nav {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
             .hero {
-                padding: 100px 0 60px;
+                margin-top: 70px;
+                padding: 2rem 1.5rem;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 2rem;
             }
 
-            .hero-subtitle {
-                font-size: 16px;
+            .hero p {
+                font-size: 1rem;
             }
 
-            .nav-actions {
-                gap: 8px;
+            .hero-buttons {
+                gap: 1rem;
+            }
+
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
             }
 
             .section-title {
-                font-size: 32px;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
             }
+
+            .benefits-grid,
+            .steps-container,
+            .pricing-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .pricing-card.popular {
+                transform: scaleY(1);
+            }
+
+            .pricing-card.popular:hover {
+                transform: translateY(-8px);
+            }
+
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .carousel {
+                animation: none;
+            }
+
+            .review-card {
+                flex: 0 0 100%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .hero {
+                margin-top: 150px;
+            }
+
+            .logo-circle {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            .contact-item {
+                padding: 1.5rem;
+            }
+
+            .ticker-content {
+                gap: 1.5rem;
+            }
+        }
+
+        /* SMOOTH SCROLLBAR (optional) */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-light);
         }
     </style>
 </head>
 <body>
-    <!-- Background Glows -->
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <div class="logo">Meta Elite</div>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#how">How It Works</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="btn btn-outline" style="font-size: 13px;">Dark</button>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-circle">ME</div>
+                <div class="logo-text">Meta Elite</div>
             </div>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-badge">
-                <span>500+ Verified Accounts ✓</span>
-            </div>
-            <h1 class="gradient-text">Get Verified on Facebook, Instagram & WhatsApp Fast</h1>
-            <p class="hero-subtitle">Trusted Meta verification solutions for creators, businesses, influencers, and brands. Fast, secure, and 98% success rate guaranteed.</p>
-            
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Get Verified Blue Tick for Facebook, Instagram & WhatsApp</h1>
+            <p>Fast and professional Meta verification assistance using secure business processes.</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="openModal('apply')">
-                    Apply Now <span>→</span>
-                </button>
-                <a href="https://wa.me/1234567890" target="_blank" class="btn btn-secondary" style="text-decoration: none;">
-                    <span>💬</span> Talk on WhatsApp
-                </a>
-            </div>
-
-            <div class="hero-visual">
-                <div class="dashboard-mock">
-                    <div class="dashboard-header">
-                        <div class="dashboard-dot"></div>
-                        <div class="dashboard-dot"></div>
-                        <div class="dashboard-dot"></div>
-                    </div>
-                    <div class="dashboard-grid">
-                        <div class="stat-item">
-                            <div class="stat-icon">👤</div>
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Verified Accounts</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">✓</div>
-                            <div class="stat-number">98%</div>
-                            <div class="stat-label">Success Rate</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">⚡</div>
-                            <div class="stat-number">7 Days</div>
-                            <div class="stat-label">Average Delivery</div>
-                        </div>
-                    </div>
-                </div>
+                <button class="btn btn-primary" onclick="scrollToForm()">Get Started</button>
+                <a href="https://wa.me/923118856789?text=Hello%20Meta%20Elite!%20I'm%20interested%20in%20verification%20services." class="btn btn-secondary">Contact on WhatsApp</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-number">500+</div>
-                    <div class="trust-label">Verified Accounts</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">98%</div>
-                    <div class="trust-label">Success Rate</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">24/7</div>
-                    <div class="trust-label">Customer Support</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">3-7</div>
-                    <div class="trust-label">Days Delivery</div>
-                </div>
+    <!-- BENEFITS SECTION -->
+    <section class="benefits" id="services">
+        <h2 class="section-title">Why Choose Meta Elite?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">✨</div>
+                <h3>Increase Trust & Authority</h3>
+                <p>Build instant credibility with verified badges that signal authenticity to your audience.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🏢</div>
+                <h3>Verified Business Identity</h3>
+                <p>Establish your business as legitimate and official on Meta platforms.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3>Boost Reach & Engagement</h3>
+                <p>Verified accounts get higher visibility and better engagement rates.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Improve Brand Credibility</h3>
+                <p>Stand out from competitors and establish market leadership in your niche.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🚀</div>
+                <h3>Grow Faster Online Presence</h3>
+                <p>Accelerate your digital growth with verified status and expanded reach.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Premium Meta Services</h2>
-                <p class="section-subtitle">Comprehensive solutions for all your Meta verification needs</p>
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Submit Details</h3>
+                <p>Client submits business information and documents</p>
             </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">👍</div>
-                        <h3 class="service-title">Facebook Verification</h3>
-                        <p class="service-description">Get the blue checkmark on your Facebook profile. Perfect for creators, influencers, and businesses looking to build authority.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">📸</div>
-                        <h3 class="service-title">Instagram Verification</h3>
-                        <p class="service-description">Stand out with an Instagram verified badge. Boost your credibility and attract more followers instantly.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">💬</div>
-                        <h3 class="service-title">WhatsApp Verification</h3>
-                        <p class="service-description">Verify your WhatsApp Business account for seamless communication and customer trust.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">⚙️</div>
-                        <h3 class="service-title">Meta Business Manager</h3>
-                        <p class="service-description">Complete Meta Business setup with verified accounts, ad accounts, and full integration.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">🔑</div>
-                        <h3 class="service-title">Account Recovery</h3>
-                        <p class="service-description">Lost access to your Meta accounts? We help recover your accounts securely and quickly.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">🤖</div>
-                        <h3 class="service-title">AI Support Assistance</h3>
-                        <p class="service-description">AI-powered support for content strategy, posting schedules, and engagement optimization.</p>
-                    </div>
-                </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Manager Setup Review</h3>
+                <p>We review your Business Manager setup and requirements</p>
             </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Documents Verified</h3>
+                <p>All documents undergo thorough verification process</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Service Activation</h3>
+                <p>Your account is configured and optimized for verification</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Final Submission</h3>
+                <p>Submit for Meta verification and await approval</p>
+            </div>
+        </div>
+        <div class="steps-note">
+            ⚠️ Processing depends on Meta review system. Final approval timeframe varies (typically 3-7 business days).
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works" id="how">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Simple 4-Step Process</h2>
-                <p class="section-subtitle">From application to verification in just days</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-number">1</div>
-                    <h3 class="timeline-title">Submit Request</h3>
-                    <p class="timeline-description">Fill out our quick application form with your account details</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-number">2</div>
-                    <h3 class="timeline-title">Review by Team</h3>
-                    <p class="timeline-description">Our expert team reviews your application thoroughly</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-number">3</div>
-                    <h3 class="timeline-title">Verification Process</h3>
-                    <p class="timeline-description">We handle the entire verification with Meta directly</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-number">4</div>
-                    <h3 class="timeline-title">Approval & Delivery</h3>
-                    <p class="timeline-description">Receive your blue checkmark and enjoy verified status</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Before/After -->
-    <section class="before-after">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Transformation Results</h2>
-                <p class="section-subtitle">See the power of verified accounts</p>
-            </div>
-
-            <div class="before-after-grid" style="margin-top: 60px;">
-                <div class="before-after-item">
-                    <h3 style="margin-bottom: 20px;">Before Verification</h3>
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <div class="profile-pic"></div>
-                            <div class="username">@username</div>
-                            <div class="profile-info">0 followers • No verification</div>
-                        </div>
-                    </div>
-                    <p style="color: var(--text-secondary); font-size: 13px;">Limited reach & credibility</p>
-                </div>
-
-                <div class="before-after-item">
-                    <h3 style="margin-bottom: 20px;">After Verification</h3>
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <div class="profile-pic"></div>
-                            <div class="username">
-                                @username
-                                <div class="verified-badge">✓</div>
-                            </div>
-                            <div class="profile-info">50k+ followers • Verified ✓</div>
-                        </div>
-                    </div>
-                    <p style="color: var(--accent); font-size: 13px;">Instant credibility & growth</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Customer Stories</h2>
-                <p class="section-subtitle">What our verified clients are saying</p>
-            </div>
-
-            <div class="testimonials-grid" style="margin-top: 60px;">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">"Meta Elite got my Instagram verified in just 5 days! The process was smooth and their support team was incredibly responsive. Highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Aisha Khan</h4>
-                            <p>Content Creator</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">"As a business, getting verified legitimately boosted our brand credibility. The investment paid off immediately with increased customer trust and sales."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Hassan Ali</h4>
-                            <p>E-commerce Entrepreneur</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">"Couldn't ask for better service. They handled everything professionally and my account got verified on both Facebook and Instagram. Pure excellence!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Fatima Ahmed</h4>
-                            <p>Digital Influencer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
+    <!-- PRICING SECTION -->
     <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">Choose the perfect plan for your needs</p>
+        <h2 class="section-title">Transparent Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Facebook Verification</h3>
+                <div class="price"><span class="price-currency">$</span>130</div>
+                <p>Professional blue tick for your Facebook page</p>
+                <button class="btn btn-primary" onclick="selectService('Facebook Verification - $130')">Select Plan</button>
             </div>
+            <div class="pricing-card">
+                <h3>Instagram Verification</h3>
+                <div class="price"><span class="price-currency">$</span>130</div>
+                <p>Get verified badge on your Instagram account</p>
+                <button class="btn btn-primary" onclick="selectService('Instagram Verification - $130')">Select Plan</button>
+            </div>
+            <div class="pricing-card popular">
+                <span class="popular-badge">MOST POPULAR</span>
+                <h3>WhatsApp Verification</h3>
+                <div class="price"><span class="price-currency">$</span>230</div>
+                <p>Verified business account with WhatsApp badge</p>
+                <button class="btn btn-primary" onclick="selectService('WhatsApp Verification - $230')">Select Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Monthly Handling</h3>
+                <div class="price"><span class="price-currency">$</span>4</div>
+                <p>Ongoing account management and support</p>
+                <button class="btn btn-primary" onclick="selectService('Monthly Handling - $4')">Select Plan</button>
+            </div>
+        </div>
+    </section>
 
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-name">Starter</div>
-                    <p class="pricing-description">Single platform verification</p>
-                    <div class="pricing-amount">₨2,999</div>
-                    <p class="pricing-period">one-time payment</p>
-                    <ul class="pricing-features">
-                        <li>1 Platform Verification</li>
-                        <li>7-Day Delivery</li>
-                        <li>Basic Support</li>
-                        <li>No Hidden Fees</li>
-                    </ul>
-                    <button class="btn btn-outline" style="width: 100%; border-color: var(--text-secondary);" onclick="openModal('apply')">Get Started</button>
+    <!-- REVIEWS SECTION -->
+    <section class="reviews" id="reviews">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">A</div>
+                        <div class="review-info">
+                            <h4>Ali Ahmed</h4>
+                            <span>📍 UAE</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Meta Elite made the entire process seamless. Got verified in just 5 days! Highly recommend their service."</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
                 </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-name">Business</div>
-                    <p class="pricing-description">Multiple platforms + business setup</p>
-                    <div class="pricing-amount">₨4,999</div>
-                    <p class="pricing-period">one-time payment</p>
-                    <ul class="pricing-features">
-                        <li>3 Platform Verification</li>
-                        <li>5-Day Delivery</li>
-                        <li>Priority Support</li>
-                        <li>Business Manager Setup</li>
-                        <li>Ad Account Verification</li>
-                    </ul>
-                    <button class="btn btn-primary" style="width: 100%;" onclick="openModal('apply')">Choose Plan</button>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">S</div>
+                        <div class="review-info">
+                            <h4>Sara Johnson</h4>
+                            <span>🇬🇧 United Kingdom</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Professional, reliable, and transparent. They handled Instagram verification perfectly. Worth every penny!"</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
                 </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-name">Elite</div>
-                    <p class="pricing-description">Premium all-in-one solution</p>
-                    <div class="pricing-amount">₨7,999</div>
-                    <p class="pricing-period">one-time payment</p>
-                    <ul class="pricing-features">
-                        <li>Unlimited Platform Verification</li>
-                        <li>3-Day Priority Delivery</li>
-                        <li>24/7 Dedicated Support</li>
-                        <li>Complete Business Setup</li>
-                        <li>AI Content Strategy</li>
-                        <li>Account Recovery Included</li>
-                    </ul>
-                    <button class="btn btn-outline" style="width: 100%; border-color: var(--text-secondary);" onclick="openModal('apply')">Get Elite</button>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">A</div>
+                        <div class="review-info">
+                            <h4>Ahmed Hassan</h4>
+                            <span>🇵🇰 Pakistan</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Finally got my blue tick! Meta Elite's guidance was crystal clear. Best investment for my brand."</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">F</div>
+                        <div class="review-info">
+                            <h4>Fatima Khan</h4>
+                            <span>🇵🇰 Pakistan</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Excellent customer support and quick turnaround. My business is now verified and growing!"</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">M</div>
+                        <div class="review-info">
+                            <h4>Mohammed Khan</h4>
+                            <span>📍 Saudi Arabia</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredibly professional service. Got WhatsApp verified in a week. Highly satisfied!"</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">L</div>
+                        <div class="review-info">
+                            <h4>Lisa Chen</h4>
+                            <span>🇦🇺 Australia</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Great experience from start to finish. Meta Elite knows exactly how to navigate Meta's verification system."</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Everything you need to know</p>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        <span>How long does verification take?</span>
-                        <div class="faq-icon">▼</div>
-                    </div>
-                    <div class="faq-answer">
-                        Typically, verification takes between 3-7 days depending on your account status and the platform. Our Elite plan guarantees 3-day delivery. Peak times may vary slightly.
-                    </div>
+    <!-- LIVE ACTIVITY -->
+    <section class="live-activity">
+        <h2 class="section-title">Live Activity</h2>
+        <div class="ticker">
+            <div class="ticker-content">
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Ali from UAE got verified</span>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What are the requirements for verification?</span>
-                        <div class="faq-icon">▼</div>
-                    </div>
-                    <div class="faq-answer">
-                        You need an active account with authentic identity information, a profile picture, at least 5,000 followers (for Instagram), and a complete bio. Different platforms have slightly different requirements.
-                    </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Sara from UK completed Instagram verification</span>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What if my verification fails?</span>
-                        <div class="faq-icon">▼</div>
-                    </div>
-                    <div class="faq-answer">
-                        We offer a full refund guarantee if verification fails on our end. We'll help you troubleshoot and reapply at no additional cost. Your success is our priority.
-                    </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Ahmed from Pakistan processed successfully</span>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is my account information safe?</span>
-                        <div class="faq-icon">▼</div>
-                    </div>
-                    <div class="faq-answer">
-                        Absolutely. We use enterprise-grade encryption and never store sensitive information. Your data is protected by the highest security standards and only used for verification.
-                    </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Fatima from Pakistan WhatsApp verified</span>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do you offer customer support?</span>
-                        <div class="faq-icon">▼</div>
-                    </div>
-                    <div class="faq-answer">
-                        Yes! We offer 24/7 support via WhatsApp, email, and Telegram. Our response time is typically under 1 hour. Premium plans include dedicated support agents.
-                    </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Mohammed from Saudi Arabia now verified</span>
                 </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can you recover deleted accounts?</span>
-                        <div class="faq-icon">▼</div>
-                    </div>
-                    <div class="faq-answer">
-                        Our account recovery service can help you regain access to disabled or deleted accounts. Success depends on the account history and reason for deletion. Contact support for a consultation.
-                    </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Lisa from Australia completed verification</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
+    <!-- ORDER FORM SECTION -->
+    <section class="form-section" id="form">
+        <h2 class="section-title">Order Now</h2>
+        <div class="form-container">
+            <form id="orderForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
                 </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Security</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-icons" style="margin-top: 12px;">
-                        <a href="https://wa.me/1234567890" class="social-icon" target="_blank" title="WhatsApp">💬</a>
-                        <a href="#" class="social-icon" title="Telegram">📱</a>
-                        <a href="#" class="social-icon" title="Email">✉️</a>
-                        <a href="#" class="social-icon" title="Instagram">📸</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Meta Elite. All rights reserved. Trusted by 500+ verified accounts.</p>
-                <p>Made with ❤️ by Meta Elite Team</p>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number *</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="+92 3XX XXXXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service...</option>
+                        <option value="Facebook Verification">Facebook Verification ($130)</option>
+                        <option value="Instagram Verification">Instagram Verification ($130)</option>
+                        <option value="WhatsApp Verification">WhatsApp Verification ($230)</option>
+                        <option value="Monthly Handling">Monthly Handling ($4)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your business..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Order Now via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:abdulmetasolutions@gmail.com">abdulmetasolutions@gmail.com</a>
             </div>
+            <div class="contact-item">
+                <div class="contact-icon">📘</div>
+                <h3>Facebook</h3>
+                <a href="https://facebook.com/Meta Elite.Shop" target="_blank">Meta Elite.Shop</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📸</div>
+                <h3>Instagram</h3>
+                <a href="https://instagram.com/Meta Elite.Shop" target="_blank">Meta Elite.Shop</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/923118856789">+92 311 8856789</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">Meta Elite © 2026</p>
+            <p class="footer-disclaimer">
+                We are independent service providers and not affiliated with Meta Platforms Inc. 
+                All services are provided in compliance with Meta's verification guidelines and policies.
+            </p>
         </div>
     </footer>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" title="Chat on WhatsApp">
-        💬
-    </a>
-
-    <!-- Modal -->
-    <div id="applyModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('apply')">✕</button>
-            <h2 class="modal-title">Apply for Verification</h2>
-            <p class="modal-subtitle">Fill out the form below and our team will review your application</p>
-
-            <form onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label>Full Name *</label>
-                    <input type="text" required placeholder="Your full name">
-                </div>
-
-                <div class="form-group">
-                    <label>Email Address *</label>
-                    <input type="email" required placeholder="your@email.com">
-                </div>
-
-                <div class="form-group">
-                    <label>WhatsApp Number *</label>
-                    <input type="tel" required placeholder="+92 300 000 0000">
-                </div>
-
-                <div class="form-group">
-                    <label>Platform *</label>
-                    <select required>
-                        <option value="">Select platform</option>
-                        <option value="facebook">Facebook</option>
-                        <option value="instagram">Instagram</option>
-                        <option value="whatsapp">WhatsApp Business</option>
-                        <option value="all">All Platforms</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Account Username *</label>
-                    <input type="text" required placeholder="@yourusername">
-                </div>
-
-                <div class="form-group">
-                    <label>Plan *</label>
-                    <select required>
-                        <option value="">Select plan</option>
-                        <option value="starter">Starter - ₨2,999</option>
-                        <option value="business">Business - ₨4,999</option>
-                        <option value="elite">Elite - ₨7,999</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
-            </form>
-        </div>
-    </div>
-
     <script>
-        function openModal(modalName) {
-            document.getElementById(modalName + 'Modal').classList.add('active');
+        function scrollToForm() {
+            const formSection = document.getElementById('form');
+            formSection.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function closeModal(modalName) {
-            document.getElementById(modalName + 'Modal').classList.remove('active');
+        function selectService(serviceName) {
+            document.getElementById('service').value = serviceName.split(' - ')[0];
+            scrollToForm();
         }
 
-        function handleSubmit(event) {
+        function handleFormSubmit(event) {
             event.preventDefault();
-            alert('Thank you! Our team will contact you shortly via WhatsApp.');
-            closeModal('apply');
-            event.target.reset();
+
+            const fullName = document.getElementById('fullName').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Format the message for WhatsApp
+            const whatsappMessage = `New Order Request%0A%0A` +
+                `Name: ${encodeURIComponent(fullName)}%0A` +
+                `Phone: ${encodeURIComponent(whatsapp)}%0A` +
+                `Email: ${encodeURIComponent(email)}%0A` +
+                `Service: ${encodeURIComponent(service)}%0A` +
+                `Message: ${encodeURIComponent(message)}`;
+
+            // Redirect to WhatsApp with the message
+            const whatsappURL = `https://wa.me/923118856789?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+
+            // Reset form
+            document.getElementById('orderForm').reset();
         }
 
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const item = this.parentElement;
-                const isActive = item.classList.contains('active');
-                
-                document.querySelectorAll('.faq-item').forEach(el => {
-                    el.classList.remove('active');
-                });
-
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('applyModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal('apply');
-            }
-        });
-
-        // Smooth scroll for navbar links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(10, 14, 39, 0.95)';
-            } else {
-                navbar.style.background = 'rgba(10, 14, 39, 0.7)';
-            }
+        // Mobile menu toggle (for future enhancement)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any additional initialization here
         });
     </script>
 </body>
